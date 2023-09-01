@@ -1,153 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Outsemble - Empowering Technology</title>
-  <style>
-    /* CSS Styling - Replace with your own styles or framework */
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
+    <title>Your Website</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
 
-    header {
-      /* Styles for the website header */
-    }
+        /* Style for the full-screen header */
+        .header {
+            background-image: url('header.png'); /* Replace with your header image URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: #fff; /* Text color on top of the header image */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-    .navbar {
-      /* Styles for the navigation bar */
-    }
+        /* Style for the navigation bar */
+        .navbar {
+            background-color: #333; /* Background color for the navigation bar */
+            overflow: hidden;
+        }
 
-    .hero {
-      /* Styles for the hero section */
-    }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #fff; /* Link text color */
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
 
-    .cta-button {
-      /* Styles for the call-to-action button */
-    }
-
-    .section {
-      /* Generic styles for content sections */
-    }
-
-    .services {
-      /* Styles for the services section */
-    }
-
-    .service-item {
-      /* Styles for individual service items */
-    }
-
-    .about {
-      /* Styles for the about section */
-    }
-
-    .team-member {
-      /* Styles for team member profiles */
-    }
-
-    .portfolio {
-      /* Styles for the portfolio section */
-    }
-
-    .portfolio-item {
-      /* Styles for individual portfolio items */
-    }
-
-    .blog {
-      /* Styles for the blog section */
-    }
-
-    .blog-post {
-      /* Styles for individual blog posts */
-    }
-
-    .contact {
-      /* Styles for the contact section */
-    }
-
-    .contact-form {
-      /* Styles for the contact form */
-    }
-
-    .footer {
-      /* Styles for the website footer */
-    }
-  </style>
+        .navbar a:hover {
+            background-color: #ddd; /* Background color on hover */
+            color: #333; /* Text color on hover */
+        }
+    </style>
 </head>
-
 <body>
-  <header>
     <div class="navbar">
-      <!-- Navigation links -->
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </div>
-    <div class="hero">
-      <!-- Hero content -->
-      <h1>Welcome to Outsemble</h1>
-      <p>Empowering Technology for a Better Tomorrow</p>
-      <a class="cta-button" href="#contact">Get Started</a>
+    <div class="header">
+        <!-- Add your business text here -->
+        <h1>Your Business Name</h1>
+        <p>Modern and Sleek</p>
     </div>
-  </header>
-
-  <main>
-    <section class="section services">
-      <h2>Our Services</h2>
-      <div class="service-item">
-        <!-- Service 1 content -->
-      </div>
-      <div class="service-item">
-        <!-- Service 2 content -->
-      </div>
-      <!-- Add more service items as needed -->
-    </section>
-
-    <section class="section about">
-      <h2>About Us</h2>
-      <p>Outsemble is a leading technology company dedicated to...</p>
-      <div class="team-member">
-        <!-- Team member 1 content -->
-      </div>
-      <div class="team-member">
-        <!-- Team member 2 content -->
-      </div>
-      <!-- Add more team member profiles as needed -->
-    </section>
-
-    <section class="section portfolio">
-      <h2>Our Portfolio</h2>
-      <div class="portfolio-item">
-        <!-- Portfolio item 1 content -->
-      </div>
-      <div class="portfolio-item">
-        <!-- Portfolio item 2 content -->
-      </div>
-      <!-- Add more portfolio items as needed -->
-    </section>
-
-    <section class="section blog">
-      <h2>Blog & Insights</h2>
-      <div class="blog-post">
-        <!-- Blog post 1 content -->
-      </div>
-      <div class="blog-post">
-        <!-- Blog post 2 content -->
-      </div>
-      <!-- Add more blog posts as needed -->
-    </section>
-
-    <section class="section contact" id="contact">
-      <h2>Contact Us</h2>
-      <div class="contact-form">
-        <!-- Contact form content -->
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <!-- Footer content -->
-  </footer>
 </body>
-
 </html>
