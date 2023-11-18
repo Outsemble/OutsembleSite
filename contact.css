@@ -1,3 +1,4 @@
+<style>
 *, *:before, *:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -214,3 +215,4 @@ body, button, input {
     padding: 0;
   }
 }
+</style>
