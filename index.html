@@ -3,40 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv='cache-control' content='no-cache'> 
-    <meta http-equiv='expires' content='0'> 
-    <meta http-equiv='pragma' content='no-cache'>
-	<link rel="stylesheet" href="style.css">
-    <title>Home</title>
+    <title>Outsemble</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font.css">
 </head>
-
 <body>
-    <header>
-        <nav>
-            <div class="logo">Outsemble</div>
-            <ul class="nav-links">
-                <li><a href="mailto:justin@gmail.com">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+    <!-- <img style="transform: rotate(180deg);" src="website_design/mesh-gradient.png" class="bg-img"> -->
+    <nav class="navigation-bar">
+        <div class="logo-conainer">
+            <img src="outsemble_logo_update.png" alt="">
+        </div>
+        <div class="links">
+            <ul>
+                <li><a>Learn</a></li>
+                <li><a>Start</a></li>
+                <li><a>Connect</a></li>
             </ul>
-        </nav>
+        </div>
+    </nav>
+    <header>
+        <div class="header-text-container">
+            <div class="bg-img">
+                <img src="website_design/gradient_background.png" alt="">
+            </div>
+            <h1 class="header-text">
+                <span class="making">Making</span> 
+                <span class="your">your</span> 
+                <span class="passion">passion</span> 
+                <span class="possible">possible.</span>
+            </h1>
+        </div>
+        <div>
+            <button class="header-button">
+                <div class="header-button-text">Create your 
+                    <span id='change-text' class="flip-animation ">website</span>
+                </div>  
+                <div class="header-button-arrow">
+                    <img class="right-arrow" src="arrow_icon.svg" alt="">
+                </div>
+            </button>
+        </div>
     </header>
-	
-	<div id="initial-text">
-	<h1>Welcome to Outsemble!</h1>
-	<p>The solution to all your software needs...
-	</p>
-	</div>
-	
-	<div id="header-container">
-	<img src="header.png" alt="header" height="400" width="800">
-	</div>
-	
-	<footer>
-		<p>© 2023 Outsemble. All Rights Reserved.</p>
-	</footer>	
-	
-</body>
+    <section class="main-section">
+        <div class="screen">
+            <div class="screen-header">
+                <div class="screen-header-left">
+                    <div class="screen-header-button close"></div>
+                    <div class="screen-header-button maximize"></div>
+                    <div class="screen-header-button minimize"></div>
+                </div>
+                <div class="screen-header-right">
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                    <div class="screen-header-ellipsis"></div>
+                </div>
+            </div>
+            <div class="screen-body">
+                <div class="screen-body-left">
+                    <div class="screen-body-left-top">
+                        <div class="box-1 bor-rad-25">
+                            <div class="left">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                            <div class="right">
+                                <div class="vert-rect"></div>
+                            </div>
+                        </div>
+                        <div class="box-2 bor-rad-25">
+                            <div class="top">
+                                <div class="left"></div>
+                                <div class="right"></div>
+                            </div>
+                            <div class="bottom">
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="screen-body-left-bottom">
+                        <div class="box-1 bor-rad-25">
+                            <div class="right">
+                                <div class="circle"></div>
+                            </div>
+                            <div class="left">
+                                <div style="width: 90%;"></div>
+                                <div style="width: 60%;"></div>
+                                <div style="width: 80%;"></div>
+                                <div style="width: 50%;"></div>
+                            </div>
 
+                        </div>
+                    </div>
+                </div>
+                <div class="screen-body-right">
+                    <div class="screen-body-right-center bor-rad-25">
+                        <div class="left">
+
+                        </div>
+                        <div class="right"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="solutions-section">
+        <div class="solution-section-main-text">
+            <h2>OUTSEMBLE</h2></br>
+            <h1>Solutions Tailored</br>For You<span class="green-period">.</span></h1>
+        </div>
+        <div class="web-design-section">
+            <div>
+                <h1>Website Design</h1>
+                <h2>Lorem ipsum dolor sit, amet consectetur adipisic. sit, amet consectetur adipisic.</h2>
+                <button>Learn More</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        const words = ['website', 'software', 'web app']
+        var num = 0
+        // Function to change the word displayed
+        function changeWord() {
+            const wordPlaceholder = document.getElementById("change-text");
+            wordPlaceholder.textContent = words[num];
+
+            num += 1
+            if (num == words.length) {
+                num = 0
+            }
+        }
+
+        setInterval(changeWord, 1200);
+    </script>
+</body>
 </html>
