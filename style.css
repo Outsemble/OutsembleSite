@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 @font-face {
     font-family: Quicksand-Regular;
-    src: url('C:/Users/justi/Desktop/fonts/Quicksand-Regular.ttf');
+    src: url('fonts/Quicksand-Regular.ttf');
 }
 @font-face {
     font-family: Fellix;
-    src: url('C:/Users/justi/Desktop/fonts/Fellix-Regular.woff2');
+    src: url('fonts/Fellix-Regular.woff2');
 }
 
 :root {
@@ -985,7 +985,7 @@ header {
     height: 100vh;
     flex-direction: column;
     /* background-color: #355566; */
-    background-image: url("C:/Users/justi/Desktop/Outsemble/outsemble_site/website_design/mesh-gradient-flipped.png");
+    background-image: url("website_design/mesh-gradient-flipped.png");
     background-size: cover;
     z-index: -10;
 }
