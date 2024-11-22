@@ -1437,7 +1437,6 @@ footer {
 
 /* linear-gradient(to right, #1dcdfe 0%, #21d0b2 100%) */
 .footer-text {
-    z-index: -99;
     font-size: 5em;
     color: #1dcdfe;
     background-image: linear-gradient(20deg, #1dcdfe  30%, #34F5C5 40%, #21d0b2  63%); 
