@@ -252,28 +252,27 @@
                             <span>CONTACT</span>
                             <span>US</span>
                         </div>
-                        <div class="contact-app-contact"><a href="mailto:outsemble@gmail.com">outsemble@gmail.com</a></div>
+                        <div class="contact-app-contact"><a>outsemble@gmail.com</a></div>
                     </div>
-                    <div class="contact-screen-body-item">
+                    <form target="_blank" action="https://formsubmit.co/outsemble@gmail.com" method="POST" class="contact-screen-body-item">
                         <div class="contact-app-form">
                             <div class="contact-app-form-group">
-                                <input class="contact-app-form-control" placeholder="NAME">
+                                <input class="contact-app-form-control" name="name" placeholder="NAME">
                             </div>
                             <div class="contact-app-form-group">
-                                <input class="contact-app-form-control" placeholder="EMAIL">
+                                <input class="contact-app-form-control" name="email" placeholder="EMAIL">
                             </div>
                             <div class="contact-app-form-group">
-                                <input class="contact-app-form-control phone-number" placeholder="PHONE NUMBER">
+                                <input class="contact-app-form-control phone-number" name="phone_number" placeholder="PHONE NUMBER">
                             </div>
                             <div class="contact-app-form-group message">
-                                <textarea class="contact-app-form-control" placeholder="WHAT CAN WE CREATE WITH YOU?"></textarea>
+                                <textarea class="contact-app-form-control" name="message" placeholder="WHAT CAN WE CREATE WITH YOU?"></textarea>
                             </div>
                             <div class="contact-app-form-group buttons">
-                                <button class="contact-app-form-button">CANCEL</button>
-                                <button class="contact-app-form-button">SEND</button>
+                                <button type="submit" class="contact-app-form-button">SEND</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                 </div>
             </div>
