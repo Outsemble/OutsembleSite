@@ -254,19 +254,19 @@
                         </div>
                         <div class="contact-app-contact"></div>
                     </div>
-                    <form target="_blank" action="https://formsubmit.co/9d34307fc60e0cd3f74b66afbafe0814" method="POST" class="contact-screen-body-item">
+                    <form id="contactForm" class="contact-screen-body-item">
                         <div class="contact-app-form">
                             <div class="contact-app-form-group">
-                                <input class="contact-app-form-control" name="name" placeholder="NAME">
+                                <input class="contact-app-form-control" name="name" placeholder="NAME" required>
                             </div>
                             <div class="contact-app-form-group">
-                                <input class="contact-app-form-control" name="email" placeholder="EMAIL">
+                                <input class="contact-app-form-control" name="email" placeholder="EMAIL" type="email" required>
                             </div>
                             <div class="contact-app-form-group">
-                                <input class="contact-app-form-control phone-number" name="phone_number" placeholder="PHONE NUMBER">
+                                <input class="contact-app-form-control phone-number" name="phone_number" placeholder="PHONE NUMBER" type="tel">
                             </div>
                             <div class="contact-app-form-group message">
-                                <textarea class="contact-app-form-control" name="message" placeholder="WHAT CAN WE CREATE WITH YOU?"></textarea>
+                                <textarea class="contact-app-form-control" name="message" placeholder="WHAT CAN WE CREATE WITH YOU?" required></textarea>
                             </div>
                             <div class="contact-app-form-group buttons">
                                 <button type="submit" class="contact-app-form-button">SEND</button>
@@ -300,6 +300,32 @@
         </div>
     </footer>
     <script>
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const formData = new FormData(event.target); // Get the form data
+                const data = Object.fromEntries(formData.entries()); // Convert to a JSON-like object
+
+                fetch("https://formsubmit.co/ajax/9d34307fc60e0cd3f74b66afbafe0814", {
+                    method: "POST",
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(data) // Send form data as JSON
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    alert('Form submitted successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while submitting the form.');
+                });
+            });
+
         document.addEventListener('DOMContentLoaded', () => {
             const phoneInput = document.querySelector('.contact-app-form-control.phone-number');
 
