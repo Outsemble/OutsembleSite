@@ -16,9 +16,9 @@
         </div>
         <div class="links">
             <ul>
-                <li><a>Learn</a></li>
-                <li><a>Start</a></li>
-                <li><a>Connect</a></li>
+                <li><a href="#solutions-section">Learn</a></li>
+                <li><a href="#lets-get-started-section">Start</a></li>
+                <li><a href="#lets-get-started-section">Connect</a></li>
             </ul>
         </div>
     </nav>
@@ -53,7 +53,7 @@
             <!-- <h2 class="header-text-s">We make your passion possible.</h2> -->
         </div>
         <div>
-            <button class="header-button">
+            <button class="header-button" onclick="document.getElementById('lets-get-started-section').scrollIntoView();">
                 <div class="header-button-text">Create your 
                     <span id='change-text' class="flip-animation">website</span>
                 </div>  
@@ -145,7 +145,7 @@
             
         </div>
     </section>
-    <section class="solutions-section">
+    <section id="solutions-section" class="solutions-section">
         <div class="sticky-parent">
             <div class="sticky">
                 <div class="scroll-section">
@@ -217,7 +217,7 @@
     </section>
     <section class="lets-get-started-section">
         <div class="slant"></div>
-        <div class="lets-get-started-container">
+        <div id="lets-get-started-section" class="lets-get-started-container">
             <div class="get-started-header">
                 <h1>
                     <span id="get-started_are">Are</span> 
@@ -269,7 +269,10 @@
                                 <textarea class="contact-app-form-control" name="message" placeholder="WHAT CAN WE CREATE WITH YOU?" required></textarea>
                             </div>
                             <div class="contact-app-form-group buttons">
-                                <button type="submit" class="contact-app-form-button">SEND</button>
+                                <button id="sendButton" type="submit" class="contact-app-form-button">SEND</button>
+                                <div id="loading" style="display:none; margin-left: 10px;height: 50px; width:50px;">
+                                    <img src="spinner.gif" alt="Loading">
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -302,29 +305,41 @@
     <script>
 
         document.getElementById('contactForm').addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the default form submission
+            event.preventDefault();
 
-                const formData = new FormData(event.target); // Get the form data
-                const data = Object.fromEntries(formData.entries()); // Convert to a JSON-like object
+            const form = event.target;
+            const sendButton = document.getElementById('sendButton');
+            const loading = document.getElementById('loading');
 
-                fetch("https://formsubmit.co/ajax/9d34307fc60e0cd3f74b66afbafe0814", {
-                    method: "POST",
-                    headers: { 
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(data) // Send form data as JSON
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                    alert('Form submitted successfully!');
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while submitting the form.');
-                });
+            // Hide button, show spinner
+            sendButton.style.display = 'none';
+            loading.style.display = 'inline-block';
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch("https://formsubmit.co/ajax/9d34307fc60e0cd3f74b66afbafe0814", {
+                method: "POST",
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                form.reset(); // Optional: Clear form after submit
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                // Restore button, hide spinner
+                sendButton.style.display = 'inline-block';
+                loading.style.display = 'none';
             });
+        });
 
         document.addEventListener('DOMContentLoaded', () => {
             const phoneInput = document.querySelector('.contact-app-form-control.phone-number');
