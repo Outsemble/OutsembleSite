@@ -1551,14 +1551,59 @@ footer {
       height: auto;
     }
   
-    .screen-body-left-top {
+    .screen-body-left-bottom {
         display: None;
     }
 
     .screen-body-left, .screen-body-right {
       width: 100%;
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
-  
+
+    .screen-body-right-center .right .top div:nth-child(1) {
+        height: 60px;
+        margin: 5px 0px 5px 0px;
+    }
+
+    div.screen-body-right > div > div.right > div.top.bor-rad-25.pulsating-2 > div:nth-child(2),
+    div.screen-body-right > div > div.right > div.top.bor-rad-25.pulsating-2 > div:nth-child(3) {
+        margin: 3px 15px 3px 15px;
+    }
+
+    .screen-body-left-top .box-1, .screen-body-left-top .box-2 {
+        height: 15vh;
+    }
+
+    div.screen-body-right > div > div.left.bor-rad-25.pulsating-2 {
+        padding: 5px 0px 5px 0px;
+    }
+
+    div.screen-body-right > div > div.left.bor-rad-25.pulsating-2 > div {
+        margin: 3px 15px 3px 15px;
+    }
+
+    div.screen-body-left > div.screen-body-left-top > div.box-1.bor-rad-25.pulsating > div.left > div {
+        height: 35px;
+        width: 35px;
+        box-shadow: 0px 0px 36px -8px rgba(0,0,0,0.75);
+    }
+
+    div.screen-body-left > div.screen-body-left-top > div.box-1.bor-rad-25.pulsating > div.right > div {
+        margin-right: 0px;
+        margin-bottom: 15px;
+        height: 105px;
+    }
+
+    div.screen-body-left > div.screen-body-left-top > div.box-2.bor-rad-25.pulsating > div.top > div.left.pulsating {
+        height: 75%;
+    }
+
+    div.screen-body-left > div.screen-body-left-top > div.box-2.bor-rad-25.pulsating > div.bottom > div {
+        height: 65px;
+        width: 65px;
+    }
+
     /* Solutions section */
     .solutions-tailered-for-you {
       width: 90%;
