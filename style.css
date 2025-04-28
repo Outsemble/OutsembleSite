@@ -1481,3 +1481,159 @@ footer {
 .visible {
     opacity: 1;
 }
+
+
+
+
+/* === MOBILE RESPONSIVENESS === */
+@media (max-width: 768px) {
+  
+    /* General */
+    body {
+      font-size: 14px;
+    }
+    
+    .navigation-bar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navigation-bar .links {
+      display: None
+    }
+  
+    .navigation-bar ul li {
+      padding: 10px 0;
+    }
+  
+    .logo-conainer img {
+      width: 150px;
+      margin: 0 auto;
+    }
+  
+    /* Header */
+    .header {
+      height: auto;
+      padding: 20px;
+    }
+  
+    .header-text-l {
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+  
+    .header-button {
+      width: 80%;
+      font-size: 1em;
+      padding: 10px;
+    }
+  
+    .header-button .header-button-text {
+      font-size: 1.5em;
+    }
+  
+    .right-arrow {
+      height: 40px;
+    }
+  
+    /* Screen section */
+    .main-section {
+      height: auto;
+    }
+  
+    .screen {
+      width: 90vw;
+      margin: 20px auto;
+    }
+  
+    .screen-body {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .screen-body-left-top {
+        display: None;
+    }
+
+    .screen-body-left, .screen-body-right {
+      width: 100%;
+    }
+  
+    /* Solutions section */
+    .solutions-tailered-for-you {
+      width: 90%;
+      margin: 20px;
+    }
+  
+    .solution-section-main-text h1, 
+    .tech-is-hard-section-main-text h1,
+    .our-process-section-main-text h1 {
+      font-size: 2em;
+    }
+  
+    .lottie-app-dev-container,
+    .lottie-app-process-container {
+      width: 90%;
+      margin: 0 auto;
+    }
+  
+    .tech-is-hard-section,
+    .our-process-section {
+      flex-direction: column;
+    }
+  
+    /* Contact section */
+    .contact-container {
+      width: 90%;
+      margin: 20px auto;
+    }
+  
+    .contact-screen-body {
+      flex-direction: column;
+    }
+  
+    .contact-screen-body-item {
+      width: 100%;
+      padding: 20px;
+    }
+  
+    /* Footer */
+    footer {
+      height: auto;
+      padding: 20px;
+      position: relative;
+    }
+  
+    .footer-text {
+      font-size: 2em;
+      text-align: center;
+    }
+  
+    .footer-text-grow {
+      font-size: 2em;
+      text-align: center;
+    }
+  
+    .footer-top-text {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Even smaller devices */
+  @media (max-width: 480px) {
+    .header-text-l {
+      font-size: 2em;
+    }
+  
+    .header-button {
+      font-size: 1em;
+    }
+  
+    .solution-section-main-text h1,
+    .tech-is-hard-section-main-text h1,
+    .our-process-section-main-text h1 {
+      font-size: 1.5em;
+    }
+  }
+  
