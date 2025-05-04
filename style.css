@@ -1495,6 +1495,10 @@ footer {
         width: 100vw !important;
     }
 
+    .divider-slant {
+        display: None;
+    }
+
     .gradient-flow {
         height: 150vh;
     }
@@ -1503,13 +1507,13 @@ footer {
         background-color: rgba(53, 72, 94, .9);
         padding: 20px 0px;
     }
-
-    .header-text-l {
-        font-size: 2em;
-    }
     
     .header-button {
         font-size: 1em;
+    }
+
+    .gradient-flow-wrapper {
+        height: 130vh;
     }
     
     .solution-section-main-text h1,
@@ -1552,7 +1556,7 @@ footer {
     }
   
     .header-text-l {
-        font-size: 5em;
+        font-size: 4.5em;
         margin: 30px;
         text-align: left;
     }
