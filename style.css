@@ -1487,9 +1487,27 @@ footer {
 
 /* === MOBILE RESPONSIVENESS === */
 @media (max-width: 768px) {
-    html, body {
+    /* html, body {
         overflow-x: hidden;
         max-width: 100vw;
+    } */
+    .navigation-bar {
+        background-color: rgba(53, 72, 94, .9);
+        padding: 20px 0px;
+    }
+
+    .header-text-l {
+        font-size: 2em;
+    }
+    
+    .header-button {
+        font-size: 1em;
+    }
+    
+    .solution-section-main-text h1,
+    .tech-is-hard-section-main-text h1,
+    .our-process-section-main-text h1 {
+        font-size: 1.5em;
     }
 
     /* General */
@@ -1511,25 +1529,32 @@ footer {
     }
   
     .logo-conainer img {
-      width: 150px;
-      margin: 0 auto;
+      width: 200px;
+      margin: 0;
+    }
+
+    .logo-conainer {
+        width: 50%;
     }
   
     /* Header */
     .header {
       height: auto;
-      padding: 20px;
+      margin-bottom: 5rem;
     }
   
     .header-text-l {
-      font-size: 2.5em;
-      margin: 20px 0;
+        font-size: 5em;
+        margin: 30px;
+        text-align: left;
     }
   
     .header-button {
-      width: 80%;
-      font-size: 1em;
-      padding: 10px;
+        width: 100%;
+        font-size: 1.3em;
+        padding: 16px;
+        border-radius: 60px;
+        margin-top: 2rem;
     }
   
     .header-button .header-button-text {
@@ -1608,6 +1633,28 @@ footer {
         width: 65px;
     }
 
+    .screen-body-right-center .right .top {
+        padding: 10px 0px;
+        margin: 0px 15px 12px 5px;
+    }
+
+    .screen-body-right-center .right .bottom {
+        margin: 0px 15px 0px 5px;
+    }
+
+    .screen-body-right-center .right .bottom div:nth-child(1) {
+        display: None;
+    }
+
+    .screen-body-right-center .right .bottom div {
+        height: 20px;
+        margin: 10px;
+    }
+
+    .screen-body-right-center .right .top div:not(:nth-child(1)) {
+        height: 20px;
+    }
+    
     /* Solutions section */
     .solutions-tailered-for-you {
       width: 90%;
@@ -1671,18 +1718,6 @@ footer {
   
   /* Even smaller devices */
   @media (max-width: 480px) {
-    .header-text-l {
-      font-size: 2em;
-    }
-  
-    .header-button {
-      font-size: 1em;
-    }
-  
-    .solution-section-main-text h1,
-    .tech-is-hard-section-main-text h1,
-    .our-process-section-main-text h1 {
-      font-size: 1.5em;
-    }
+
   }
   
