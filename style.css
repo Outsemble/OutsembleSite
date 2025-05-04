@@ -1491,6 +1491,10 @@ footer {
         overflow-x: hidden;
         max-width: 100vw;
     } */
+    .gradient-flow {
+        height: 150vh;
+    }
+
     .navigation-bar {
         background-color: rgba(53, 72, 94, .9);
         padding: 20px 0px;
