@@ -1324,6 +1324,10 @@ header {
     width: 100%; 
 }
 
+.contact-app-form input {
+    text-transform: lowercase;
+}
+
 .contact-app-form-group {
     margin-bottom: 15px;
 }
@@ -1659,6 +1663,52 @@ footer {
         height: 20px;
     }
     
+    .solutions-section {
+        margin-top: 0px;
+    }
+
+    .sticky-parent {
+        height: auto;
+    }
+
+    .sticky {
+        overflow: visible;
+        position: relative;
+        height: auto;
+    }
+
+    .scroll-section .scroll-section-wrapper {
+        height: auto;
+    }
+    .scroll-section {
+        transform: translate3d(0vw, 0px, 0px) !important;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .scroll-section .scroll-section-wrapper {
+        flex-direction: column;
+        padding: 50px 0px;
+    }
+
+    .tech-is-hard-section-main-text{
+        text-align: center;
+    }
+
+    .our-process-section-main-text {
+        width: auto;
+    }
+
+    .lets-get-started-section .slant {
+        top: -20vw;
+        left: -2vw;
+        width: 120vw;
+    }
+
+    .contact-screen {
+        height: auto;
+    }
+
     /* Solutions section */
     .solutions-tailered-for-you {
       width: 90%;
@@ -1694,29 +1744,32 @@ footer {
   
     .contact-screen-body-item {
       width: 100%;
-      padding: 20px;
     }
   
+    .lets-get-started-section {
+        margin-bottom: 28rem;
+    }
+
     /* Footer */
     footer {
-      height: auto;
-      padding: 20px;
-      position: relative;
+        justify-content: flex-start;
     }
   
     .footer-text {
       font-size: 2em;
-      text-align: center;
     }
   
     .footer-text-grow {
       font-size: 2em;
-      text-align: center;
     }
   
+    .footer-text-container {
+        font-size: 2em;
+    }
+
     .footer-top-text {
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
     }
   }
   
