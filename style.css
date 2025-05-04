@@ -1491,10 +1491,11 @@ footer {
 
 /* === MOBILE RESPONSIVENESS === */
 @media (max-width: 768px) {
-    /* html, body {
+    html, body {
         overflow-x: hidden;
         max-width: 100vw;
-    } */
+    }
+
     .gradient-flow {
         height: 150vh;
     }
@@ -1689,6 +1690,10 @@ footer {
     .scroll-section .scroll-section-wrapper {
         flex-direction: column;
         padding: 50px 0px;
+    }
+
+    .scroll-section {
+        width: auto;
     }
 
     .tech-is-hard-section-main-text{
